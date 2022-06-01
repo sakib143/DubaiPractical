@@ -24,14 +24,6 @@ fun bindMoviesList(view: RecyclerView, list: List<MoviesModel.Data>?, listner: H
             view.adapter = adapter
         } else {
             adapter.updateList(updateListModel?.positon!!)
-//            if(updateListModel?.isUpdate!!) {
-//                if(list.get(updateListModel.positon).status == 1) {
-//                    list.get(updateListModel.positon).status = 2
-//                } else {
-//                    list.get(updateListModel.positon).status = 1
-//                }
-//            }
-//            adapter.updateList(list)
         }
     }
 }
