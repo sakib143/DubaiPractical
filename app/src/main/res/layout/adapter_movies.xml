@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.mypractical.data.model.MoviesModel.Data" />
+        <variable
+            name="listner"
+            type="com.example.mypractical.listner.HomeListner" />
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Movie name"
+            android:text="@{model.movieName}"
+            android:textSize="@dimen/_15ssp"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:onClick="@{()-> listner.updateFavourites(position)}"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            setLikeUnlike="@{model.status}"
+            tools:background="@drawable/ic_un_like"/>
+
+    </RelativeLayout>
+
+</layout>

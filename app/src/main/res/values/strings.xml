@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DubaiPractical</string>
+
+
+    <string name="enter_user_name">Enter username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
+</resources>
